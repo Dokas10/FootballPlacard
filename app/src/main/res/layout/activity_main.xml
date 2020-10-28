@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:focusable="true">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,28 +17,25 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/team_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Team Name 1"
                     android:layout_marginTop="5dp"
-                    android:textAlignment="center"
                     android:gravity="center"
-                    android:text=""/>
+                    android:hint="Team Name 1"
+                    android:text=""
+                    android:textAlignment="center"/>
 
                 <TextView
+                    style="@style/PrimaryHeaders"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Goals"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    android:layout_height="wrap_content"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -49,30 +45,19 @@
 
                     <Button
                         android:id="@+id/dec_gol_1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@color/white"
-                        android:text="-"
-                        android:onClick="decGoal1"
-                        android:textSize="30sp" />
+                        style="@style/PrimaryMinusButtons"
+                        android:onClick="decGoal1"/>
 
                     <TextView
                         android:id="@+id/goals_1"
+                        style="@style/Goals"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="36sp"/>
+                        android:layout_height="wrap_content"/>
 
                     <Button
                         android:id="@+id/inc_gol_1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@color/white"
-                        android:layout_marginLeft="10dp"
-                        android:text="+"
-                        android:onClick="incGoal1"
-                        android:textSize="30sp"/>
+                        style="@style/PrimaryPlusButtons"
+                        android:onClick="incGoal1"/>
 
                 </LinearLayout>
 
@@ -87,12 +72,10 @@
                         android:orientation="vertical">
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Fouls"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Fouls" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -102,40 +85,27 @@
 
                             <Button
                                 android:id="@+id/dec_foul_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decFouls1"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decFouls1"/>
 
                             <TextView
                                 android:id="@+id/fouls_1"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content" />
 
                             <Button
                                 android:id="@+id/inc_foul_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incFouls1"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incFouls1" />
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Offsides"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Offsides"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -145,40 +115,27 @@
 
                             <Button
                                 android:id="@+id/ec_off_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decOffside1"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decOffside1"/>
 
                             <TextView
                                 android:id="@+id/offsides_1"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content"/>
 
                             <Button
                                 android:id="@+id/inc_off_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incOffside1"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incOffside1" />
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Yellow Cards"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Yellow Cards"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -188,40 +145,27 @@
 
                             <Button
                                 android:id="@+id/dec_yell_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decYellow1"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decYellow1"/>
 
                             <TextView
                                 android:id="@+id/yellow_cards_1"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content" />
 
                             <Button
                                 android:id="@+id/inc_yell_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incYellow1"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incYellow1"/>
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Red Cards"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Red Cards"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -231,30 +175,19 @@
 
                             <Button
                                 android:id="@+id/dec_red_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decRed1"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decRed1"/>
 
                             <TextView
                                 android:id="@+id/red_cards_1"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content"/>
 
                             <Button
                                 android:id="@+id/inc_red_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incRed1"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incRed1" />
 
                         </LinearLayout>
 
@@ -272,9 +205,9 @@
                 android:background="@android:color/darker_gray" />
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <EditText
@@ -282,18 +215,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:hint="Team Name 2"
-                    android:textAlignment="center"
                     android:gravity="center"
-                    android:text=""/>
+                    android:hint="Team Name 2"
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <TextView
+                    style="@style/PrimaryHeaders"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Goals"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    android:layout_height="wrap_content"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -303,30 +233,19 @@
 
                     <Button
                         android:id="@+id/dec_gol_2"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@color/white"
-                        android:text="-"
-                        android:onClick="decGoal2"
-                        android:textSize="30sp" />
+                        style="@style/PrimaryMinusButtons"
+                        android:onClick="decGoal2"/>
 
                     <TextView
                         android:id="@+id/goals_2"
+                        style="@style/Goals"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="36sp"/>
+                        android:layout_height="wrap_content"/>
 
                     <Button
                         android:id="@+id/inc_gol_2"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@color/white"
-                        android:layout_marginLeft="10dp"
-                        android:text="+"
-                        android:onClick="incGoal2"
-                        android:textSize="30sp"/>
+                        style="@style/PrimaryPlusButtons"
+                        android:onClick="incGoal2"/>
 
                 </LinearLayout>
 
@@ -341,12 +260,10 @@
                         android:orientation="vertical">
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Fouls"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Fouls"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -356,40 +273,27 @@
 
                             <Button
                                 android:id="@+id/dec_fol_1"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decFoul2"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decFoul2"/>
 
                             <TextView
                                 android:id="@+id/fouls_2"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content"/>
 
                             <Button
                                 android:id="@+id/inc_fol_2"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incFoul2"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incFoul2"/>
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Offsides"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Offsides" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -399,40 +303,27 @@
 
                             <Button
                                 android:id="@+id/dec_off_2"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decOffside2"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decOffside2"/>
 
                             <TextView
                                 android:id="@+id/offsides_2"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content" />
 
                             <Button
                                 android:id="@+id/inc_off_2"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incOffside2"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incOffside2"/>
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Yellow Cards"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Yellow Cards" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -442,40 +333,27 @@
 
                             <Button
                                 android:id="@+id/dec_yell_2"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decYellow2"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decYellow2"/>
 
                             <TextView
                                 android:id="@+id/yellow_cards_2"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content" />
 
                             <Button
                                 android:id="@+id/inc_yell_"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incYellow2"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incYellow2" />
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Red Cards"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:text="Red Cards" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -485,30 +363,19 @@
 
                             <Button
                                 android:id="@+id/dec_red_2"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/white"
-                                android:text="-"
-                                android:onClick="decRed2"
-                                android:textSize="25sp" />
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decRed2"/>
 
                             <TextView
                                 android:id="@+id/red_cards_2"
+                                style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="25sp"/>
+                                android:layout_height="wrap_content"/>
 
                             <Button
                                 android:id="@+id/inc_red_2"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@color/white"
-                                android:layout_marginLeft="10dp"
-                                android:text="+"
-                                android:onClick="incRed2"
-                                android:textSize="25sp"/>
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incRed2"/>
 
                         </LinearLayout>
 
@@ -552,16 +419,18 @@
                 android:id="@+id/start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Start"
+                android:backgroundTint="#00bcd4"
                 android:onClick="startCount"
+                android:text="Start"
                 android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reset"
+                android:backgroundTint="#00bcd4"
                 android:onClick="resetCount"
+                android:text="Reset"
                 android:textSize="15sp"/>
 
         </LinearLayout>

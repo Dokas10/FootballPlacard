@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
     public int decrement(TextView tv, int dec1, String type){
         if(dec1<=0){
-            Toast toast = Toast.makeText(this, type+" não podem ser negativos", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this, type+" cannot be negative!", Toast.LENGTH_SHORT);
             toast.show();
             return dec1;
         }else{
