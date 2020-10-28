@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*Global Variables definitions*/
     int goals1=0, goals2=0;
     int fouls1=0, fouls2=0;
     int offside1=0, offside2=0;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*All important Textview instances*/
         goal1 = findViewById(R.id.goals_1);
         goal2 = findViewById(R.id.goals_2);
         foul1 = findViewById(R.id.fouls_1);
@@ -38,11 +40,13 @@ public class MainActivity extends AppCompatActivity {
         r1 = findViewById(R.id.red_cards_1);
         r2 = findViewById(R.id.red_cards_2);
 
+        /*EditText instances*/
         nome1 = findViewById(R.id.team_1);
         nome2 = findViewById(R.id.team_2);
 
     }
 
+    /*OnClick methods for goal increment and decrement*/
     public void incGoal1(View view){
         goals1 = increment(goal1, goals1);
     }
@@ -57,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    /*OnClick methods for foul increment and decrement*/
     public void incFouls1(View view){
         fouls1 = increment(foul1, fouls1);
     }
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /*OnClick methods for offside increment and decrement*/
     public void incOffside1(View view){
         offside1 = increment(off1, offside1);
     }
@@ -86,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /*OnClick methods for yellow cards increment and decrement*/
     public void incYellow1(View view){
         yellow1 = increment(yell1, yellow1);
     }
@@ -100,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /*OnClick methods for red cards increment and decrement*/
     public void incRed1(View view){
         red1 = increment(r1, red1);
     }
@@ -114,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /*function that increments and change value on TextView
+    * @param tv is the TextView
+    * @param inc1 is the value to increment */
     public int increment(TextView tv, int inc1){
 
         inc1++;
@@ -122,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*function that decrements and change value on TextView
+     * @param tv is the TextView
+     * @param dec1 is the value to decrement
+     * @param type is name of the value that is going to be decremented */
     public int decrement(TextView tv, int dec1, String type){
         if(dec1<=0){
             Toast toast = Toast.makeText(this, type+" cannot be negative!", Toast.LENGTH_SHORT);
@@ -135,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    /*Function that starts the chronometer*/
     public void startCount(View view){
 
         Chronometer chronometer = (Chronometer) findViewById(R.id.count);
@@ -143,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*Function that resets all app values and the chronometer*/
     public void resetCount(View view){
 
         Chronometer chronometer = (Chronometer) findViewById(R.id.count);
