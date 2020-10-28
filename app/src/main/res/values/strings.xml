@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FootballPlacard</string>
+    <string name="team_name_1">Team Name 1</string>
+    <string name="team_name_2">Team Name 2</string>
+    <string name="goals">Goals</string>
+    <string name="fouls">Fouls</string>
+    <string name="offside">Offsides</string>
+    <string name="yellow_card">Yellow Cards</string>
+    <string name="red_card">Red Cards</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
 </resources>

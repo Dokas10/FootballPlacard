@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:hint="Team Name 1"
+                    android:hint="@string/team_name_1"
                     android:text=""
                     android:textAlignment="center"/>
 
@@ -75,7 +75,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <!-- Team 1 fouls header -->
@@ -83,7 +83,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Fouls" />
+                            android:text="@string/fouls" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Offsides"/>
+                            android:text="@string/offside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Yellow Cards"/>
+                            android:text="@string/yellow_card"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Red Cards"/>
+                            android:text="@string/red_card"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -229,7 +229,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:hint="Team Name 2"
+                    android:hint="@string/team_name_2"
                     android:text=""
                     android:textAlignment="center" />
 
@@ -269,14 +269,14 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Fouls"/>
+                            android:text="@string/fouls"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -306,7 +306,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Offsides" />
+                            android:text="@string/offside" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -336,7 +336,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Yellow Cards" />
+                            android:text="@string/yellow_card" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -366,7 +366,7 @@
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Red Cards" />
+                            android:text="@string/red_card" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -438,7 +438,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00bcd4"
                 android:onClick="startCount"
-                android:text="Start"
+                android:text="@string/start"
                 android:textSize="15sp"/>
 
             <!-- Reset Button -->
@@ -448,7 +448,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00bcd4"
                 android:onClick="resetCount"
-                android:text="Reset"
+                android:text="@string/reset"
                 android:textSize="15sp"/>
 
         </LinearLayout>
