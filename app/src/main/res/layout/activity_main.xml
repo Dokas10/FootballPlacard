@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Handles all game statistics-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -126,20 +125,18 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 1 offside decrement button -->
+                            <!-- Team 1 name -->
                             <Button
                                 android:id="@+id/ec_off_1"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decOffside1"/>
 
-                            <!-- Team 1 offside label -->
                             <TextView
                                 android:id="@+id/offsides_1"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
 
-                            <!-- Team 1 increment button -->
                             <Button
                                 android:id="@+id/inc_off_1"
                                 style="@style/SecondaryPlusButton"
@@ -147,7 +144,6 @@
 
                         </LinearLayout>
 
-                        <!-- Team 1 yellow cards header -->
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
@@ -160,20 +156,17 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 1 yellow card decrement button -->
                             <Button
                                 android:id="@+id/dec_yell_1"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decYellow1"/>
 
-                            <!-- Team 1 yellow card label -->
                             <TextView
                                 android:id="@+id/yellow_cards_1"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
-                            <!-- Team 1 yellow card increment button -->
                             <Button
                                 android:id="@+id/inc_yell_1"
                                 style="@style/SecondaryPlusButton"
@@ -181,7 +174,6 @@
 
                         </LinearLayout>
 
-                        <!-- Team 1 red card header -->
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
@@ -194,20 +186,17 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 1 red card decrement button -->
                             <Button
                                 android:id="@+id/dec_red_1"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decRed1"/>
 
-                            <!-- Team 1 red card label -->
                             <TextView
                                 android:id="@+id/red_cards_1"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
 
-                            <!-- Team 1 red card decrement button -->
                             <Button
                                 android:id="@+id/inc_red_1"
                                 style="@style/SecondaryPlusButton"
@@ -222,7 +211,6 @@
 
             </LinearLayout>
 
-            <!-- Middle separation line -->
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
@@ -235,7 +223,6 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <!-- Team 2 name -->
                 <EditText
                     android:id="@+id/team_2"
                     android:layout_width="match_parent"
@@ -246,7 +233,6 @@
                     android:text=""
                     android:textAlignment="center" />
 
-                <!-- Team 2 goal header -->
                 <TextView
                     style="@style/PrimaryHeaders"
                     android:layout_width="match_parent"
@@ -258,20 +244,17 @@
                     android:layout_gravity="center"
                     android:orientation="horizontal">
 
-                    <!-- Team 2 goal decrement button -->
                     <Button
                         android:id="@+id/dec_gol_2"
                         style="@style/PrimaryMinusButtons"
                         android:onClick="decGoal2"/>
 
-                    <!-- Team 2 goal label -->
                     <TextView
                         android:id="@+id/goals_2"
                         style="@style/Goals"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
-                    <!-- Team 2 goal increment button -->
                     <Button
                         android:id="@+id/inc_gol_2"
                         style="@style/PrimaryPlusButtons"
@@ -289,7 +272,6 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <!-- Team 2 foul header -->
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
@@ -302,20 +284,17 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 2 foul decrement button -->
                             <Button
                                 android:id="@+id/dec_fol_1"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decFoul2"/>
 
-                            <!-- Team 2 foul label -->
                             <TextView
                                 android:id="@+id/fouls_2"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
 
-                            <!-- Team 2 foul increment button -->
                             <Button
                                 android:id="@+id/inc_fol_2"
                                 style="@style/SecondaryPlusButton"
@@ -323,7 +302,6 @@
 
                         </LinearLayout>
 
-                        <!-- Team 2 offside header -->
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
@@ -336,20 +314,17 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 2 offside decrement button -->
                             <Button
                                 android:id="@+id/dec_off_2"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decOffside2"/>
 
-                            <!-- Team 2 offside label -->
                             <TextView
                                 android:id="@+id/offsides_2"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
-                            <!-- Team 2 offside increment button -->
                             <Button
                                 android:id="@+id/inc_off_2"
                                 style="@style/SecondaryPlusButton"
@@ -357,7 +332,6 @@
 
                         </LinearLayout>
 
-                        <!-- Team 2 yellow card header -->
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
@@ -370,20 +344,17 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 2 yellow card decrement button -->
                             <Button
                                 android:id="@+id/dec_yell_2"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decYellow2"/>
 
-                            <!-- Team 2 yellow card label -->
                             <TextView
                                 android:id="@+id/yellow_cards_2"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
-                            <!-- Team 2 yellow card increment button -->
                             <Button
                                 android:id="@+id/inc_yell_"
                                 style="@style/SecondaryPlusButton"
@@ -391,7 +362,6 @@
 
                         </LinearLayout>
 
-                        <!-- Team 2 red card label -->
                         <TextView
                             style="@style/SecondaryHeaders"
                             android:layout_width="match_parent"
@@ -404,20 +374,17 @@
                             android:layout_gravity="center"
                             android:orientation="horizontal">
 
-                            <!-- Team 2 red card decrement button -->
                             <Button
                                 android:id="@+id/dec_red_2"
                                 style="@style/SecondaryMinusButton"
                                 android:onClick="decRed2"/>
 
-                            <!-- Team 2 red card label -->
                             <TextView
                                 android:id="@+id/red_cards_2"
                                 style="@style/SecondaryCountLabels"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
 
-                            <!-- Team 2 red card increment button -->
                             <Button
                                 android:id="@+id/inc_red_2"
                                 style="@style/SecondaryPlusButton"
