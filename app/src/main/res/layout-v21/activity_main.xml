@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.70">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Team 1 name -->
+                <EditText
+                    android:id="@+id/team_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:hint="Team Name 1"
+                    android:text=""
+                    android:textAlignment="center"/>
+
+                <!-- Team 1 goal header -->
+                <TextView
+                    style="@style/PrimaryHeaders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Layout that handles team 1 goal related views -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Team 1 goal decrement button -->
+                    <Button
+                        android:id="@+id/dec_gol_1"
+                        style="@style/PrimaryMinusButtons"
+                        android:onClick="decGoal1"/>
+
+                    <!-- Team 1 goal label -->
+                    <TextView
+                        android:id="@+id/goals_1"
+                        style="@style/Goals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- Team 1 goal increment button -->
+                    <Button
+                        android:id="@+id/inc_gol_1"
+                        style="@style/PrimaryPlusButtons"
+                        android:onClick="incGoal1"/>
+
+                </LinearLayout>
+
+                <!-- View that handles all the game attributes-->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Team 1 fouls header -->
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fouls" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <!-- Team 1 fouls decrement button -->
+                            <Button
+                                android:id="@+id/dec_foul_1"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decFouls1"/>
+
+                            <!-- Team 1 fouls label -->
+                            <TextView
+                                android:id="@+id/fouls_1"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <!-- Team 1 fouls increment button -->
+                            <Button
+                                android:id="@+id/inc_foul_1"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incFouls1" />
+
+                        </LinearLayout>
+
+                        <!-- Team 1 offsides header -->
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Offsides"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <!-- Team 1 name -->
+                            <Button
+                                android:id="@+id/ec_off_1"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decOffside1"/>
+
+                            <TextView
+                                android:id="@+id/offsides_1"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/inc_off_1"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incOffside1" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yellow Cards"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/dec_yell_1"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decYellow1"/>
+
+                            <TextView
+                                android:id="@+id/yellow_cards_1"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Button
+                                android:id="@+id/inc_yell_1"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incYellow1"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Red Cards"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/dec_red_1"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decRed1"/>
+
+                            <TextView
+                                android:id="@+id/red_cards_1"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/inc_red_1"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incRed1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/team_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:hint="Team Name 2"
+                    android:text=""
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/PrimaryHeaders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/dec_gol_2"
+                        style="@style/PrimaryMinusButtons"
+                        android:onClick="decGoal2"/>
+
+                    <TextView
+                        android:id="@+id/goals_2"
+                        style="@style/Goals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:id="@+id/inc_gol_2"
+                        style="@style/PrimaryPlusButtons"
+                        android:onClick="incGoal2"/>
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fouls"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/dec_fol_1"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decFoul2"/>
+
+                            <TextView
+                                android:id="@+id/fouls_2"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/inc_fol_2"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incFoul2"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Offsides" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/dec_off_2"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decOffside2"/>
+
+                            <TextView
+                                android:id="@+id/offsides_2"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Button
+                                android:id="@+id/inc_off_2"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incOffside2"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yellow Cards" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/dec_yell_2"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decYellow2"/>
+
+                            <TextView
+                                android:id="@+id/yellow_cards_2"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Button
+                                android:id="@+id/inc_yell_"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incYellow2" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/SecondaryHeaders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Red Cards" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/dec_red_2"
+                                style="@style/SecondaryMinusButton"
+                                android:onClick="decRed2"/>
+
+                            <TextView
+                                android:id="@+id/red_cards_2"
+                                style="@style/SecondaryCountLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/inc_red_2"
+                                style="@style/SecondaryPlusButton"
+                                android:onClick="incRed2"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Layout that handles the chronometer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.50">
+
+        <!-- Chronometer -->
+        <Chronometer
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="80sp" />
+
+    </LinearLayout>
+
+    <!-- Layout that handles the reset and start buttons -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.70">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!-- Start button -->
+            <Button
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00bcd4"
+                android:onClick="startCount"
+                android:text="Start"
+                android:textSize="15sp"/>
+
+            <!-- Reset Button -->
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00bcd4"
+                android:onClick="resetCount"
+                android:text="Reset"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
